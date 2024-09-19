@@ -1,3 +1,12 @@
+// date---> 17/9/2024
+
+#include <iostream>
+#include <vector>
+#include <map>
+#include <string>
+
+using namespace std;
+
 class Solution {
 public:
     vector<string> uncommonFromSentences(string s1, string s2) {
@@ -40,3 +49,28 @@ public:
         return ans;
     }
 };
+
+// Main function to test the code
+int main() {
+    // Creating an instance of the Solution class
+    Solution sol;
+
+    // Input strings
+    string s1, s2;
+    cout << "Enter the first sentence: ";
+    getline(cin, s1);  // Reading the first sentence
+    cout << "Enter the second sentence: ";
+    getline(cin, s2);  // Reading the second sentence
+
+    // Calling the function to get uncommon words
+    vector<string> result = sol.uncommonFromSentences(s1, s2);
+
+    // Output the result
+    cout << "Uncommon words: ";
+    for (const string& word : result) {
+        cout << word << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
